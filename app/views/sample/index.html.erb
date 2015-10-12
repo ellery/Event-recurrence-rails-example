@@ -1,13 +1,19 @@
 <body>
 <%= form_for FakeModel.new, :url => sample_index_path do |f| %>
 
-  <p>
+  <div class="field">
     Reccuring date <br/>
     <%= f.select_recurring :recurring_rules %>
-  </p>
+  </div>
+  <br />
   <div class="field">
     Time<br />
     <%= f.text_field :published_at_time, :class => 'datepicker', :size => 5, :maxlength => 5 %> 
+  </div>
+  <br />
+  <div class="field">
+    Times to repeat<br />
+    <%= f.number_field :count, :size => 5, :maxlength => 3 %> 
   </div>
   <p>
     <%= f.submit %>

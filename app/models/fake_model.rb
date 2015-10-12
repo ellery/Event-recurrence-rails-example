@@ -4,7 +4,7 @@ class FakeModel
   extend ActiveModel::Naming
   # include ActiveModel::MassAssignmentSecurity
 
-  attr_accessor :recurring_rules, :published_at_date, :published_at_time
+  attr_accessor :recurring_rules, :published_at_date, :published_at_time, :count
 
   
 
@@ -18,10 +18,7 @@ class FakeModel
 
   def non_recurring_rule; 1; end
   def persisted?; false; end
-  
-  
-  private
-  
+
 
   
 end
