@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 gem 'ice_cube'
 gem 'recurring_select'
+gem 'jquery-ui-rails'

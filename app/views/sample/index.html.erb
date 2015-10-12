@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>DateRecurrence</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
 <body>
 <%= form_for FakeModel.new, :url => sample_index_path do |f| %>
 
@@ -13,6 +5,11 @@
     <%= f.label :recurring_rules, "no defaults and not set" %><br/>
     <%= f.select_recurring :recurring_rules %>
   </p>
+  <div class="field">
+    <%= f.label :published_at %><br />
+    <%= f.text_field :published_at_date, :size => 10, :maxlength => 10 %>
+     <%= f.text_field :published_at_time, :class => 'datepicker', :size => 5, :maxlength => 5 %> 
+  </div>
 
   <p>
     <%= f.label :current_custom_rule, "no defaults but custom rule" %><br/>
@@ -57,4 +54,3 @@
   </p>
 <% end %>
 </body>
-</html>
